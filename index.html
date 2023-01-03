@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exchange Rates</title>
+    </head>
+    <body>
+        <script>
+            function getExchangeRateData(){
+                document.getElementById('result').innerHTML = '';
+                var myHeaders = new Headers();
+                myHeaders.append("apikey", "oNVHnatr93QM9HPYULmelCsnxs80eV7F");
+    
+                var requestOptions = {
+                method: 'GET',
+                redirect: 'follow',
+                headers: myHeaders
+                };
+    
+                fetch("https://api.apilayer.com/exchangerates_data/convert?to=TWD&from=JPY&amount=17000", requestOptions)
+                .then(response => response.json())
+                .then(result => { 
+                    console.log('test', result);
+                    document.getElementById('result').innerHTML = 'rate: ' + result.info.rate + '<br>Current Money: ' + result.result;
+                    if(result.result > 3990) {
+                        var profit = result.result - 3990;
+                        document.getElementById('result').innerHTML += "<br>You've earned " + profit.toFixed(2);
+                    }
+                })
+                .catch(error => console.log('error', error));
+            }
+        </script>
+        <button onclick="getExchangeRateData()">check Japan Account</button>
+        <div id="result"></div>
+    </body>
+</html>

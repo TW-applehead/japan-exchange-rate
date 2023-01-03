@@ -1,0 +1,24 @@
+{
+  "name": "japan-exchange-rate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TW-applehead/japan-exchange-rate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TW-applehead/japan-exchange-rate/issues"
+  },
+  "homepage": "https://github.com/TW-applehead/japan-exchange-rate#readme",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
