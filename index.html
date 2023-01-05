@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="/default.css" rel="stylesheet">
         <title>Exchange Rates</title>
     </head>
     <body>
@@ -19,20 +20,36 @@
                 headers: myHeaders
                 };
     
-                fetch("https://api.apilayer.com/exchangerates_data/convert?to=TWD&from=JPY&amount=17000", requestOptions)
+                var amount = document.getElementById("myAmount").value;
+                var currency1 = document.getElementById("currency1").value;
+                var currency2 = document.getElementById("currency2").value;
+                var currencyText2 = document.getElementById("currency2").selectedOptions[0].text;
+                fetch("https://api.apilayer.com/exchangerates_data/convert?to=" + currency2 + "&from=" + currency1 + "&amount=" + amount, requestOptions)
                 .then(response => response.json())
                 .then(result => { 
                     console.log('test', result);
-                    document.getElementById('result').innerHTML = 'rate: ' + result.info.rate + '<br>Current Money: ' + result.result;
-                    if(result.result > 3990) {
-                        var profit = result.result - 3990;
-                        document.getElementById('result').innerHTML += "<br>You've earned " + profit.toFixed(2);
-                    }
+                    document.getElementById('result').innerHTML = '目前匯率為: ' + result.info.rate + '<br>換算成' + currencyText2 + '為: ' + result.result.toFixed(2);
                 })
                 .catch(error => console.log('error', error));
             }
         </script>
-        <button onclick="getExchangeRateData()">check Japan Account</button>
-        <div id="result"></div>
+        <div class="exchange-rate">
+            <div class="select-group">
+                <select name="currency1" id="currency1">
+                    <option value="JPY">日幣</option>
+                    <option value="TWD">台幣</option>
+                    <option value="USD">美金</option>
+                </select>
+                ->
+                <select name="currency2" id="currency2">
+                    <option value="TWD">台幣</option>
+                    <option value="JPY">日幣</option>
+                    <option value="USD">美金</option>
+                </select>
+            </div>
+            <input id="myAmount" type="number"/>
+            <button onclick="getExchangeRateData()">查詢</button>
+            <div id="result"></div>
+        </div>
     </body>
 </html>

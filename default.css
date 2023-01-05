@@ -1,0 +1,31 @@
+.exchange-rate {
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.exchange-rate .select-group {
+    margin-bottom: 15px;
+    line-height: 1;
+}
+.exchange-rate .select-group select {
+    padding: 5px;
+    border: 1px solid #989898;
+    border-radius: unset;
+}
+
+input[type="number"] {
+    padding: 5px;
+    border: unset;
+    border-radius: unset;
+    box-shadow: 0 0 3px 0px rgb(0, 0, 0, 30%);
+    line-height: 20px;
+}
+button {
+    background: #AD181E;
+    color: #FFFFFF;
+    border: unset;
+    border-radius: unset;
+    padding: 5px 30px;
+    margin-left: 15px;
+    line-height: 20px;
+}
