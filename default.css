@@ -29,12 +29,9 @@
 
 input[type="number"] {
     padding: 5px;
-    border: unset;
+    line-height: 18px;
+    border: 1px solid #989898;
     border-radius: unset;
-    line-height: 20px;
-    box-shadow: 0 0 3px 0px rgb(0, 0, 0, 30%);
-    -webkit-box-shadow: 0 0 3px 0px rgb(0, 0, 0, 30%);
-    -moz-box-shadow: 0 0 3px 0px rgb(0, 0, 0, 30%);
 }
 button {
     background: #AD181E;
