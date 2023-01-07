@@ -15,10 +15,12 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    background-image: url(/icons/down-arrow.png);
+    background-image: url('icons/down-arrow.png');
     background-repeat: no-repeat;
     background-size: 15px;
     background-position: calc(100% - 10px) center;
+    background-color: #FFFFFF;
+    color: #000000;
 }
 .exchange-rate .right-arrow-icon {
     max-width: 24px;
@@ -29,8 +31,10 @@ input[type="number"] {
     padding: 5px;
     border: unset;
     border-radius: unset;
-    box-shadow: 0 0 3px 0px rgb(0, 0, 0, 30%);
     line-height: 20px;
+    box-shadow: 0 0 3px 0px rgb(0, 0, 0, 30%);
+    -webkit-box-shadow: 0 0 3px 0px rgb(0, 0, 0, 30%);
+    -moz-box-shadow: 0 0 3px 0px rgb(0, 0, 0, 30%);
 }
 button {
     background: #AD181E;
