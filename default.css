@@ -29,3 +29,6 @@ button {
     margin-left: 15px;
     line-height: 20px;
 }
+#result {
+    padding: 10px;
+}
