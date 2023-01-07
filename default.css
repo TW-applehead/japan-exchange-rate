@@ -3,6 +3,25 @@
     transform: translateY(-50%);
     text-align: center;
 }
+.exchange-rate .coin-icon {
+    max-width: 50%;
+    width: 150px;
+    margin-bottom: 30px;
+    perspective: 100px;
+    -webkit-animation: rotating 3s linear infinite;
+    -moz-animation: rotating 3s linear infinite;
+    -ms-animation: rotating 3s linear infinite;
+    -o-animation: rotating 3s linear infinite;
+    animation: rotating 3s linear infinite;
+}
+@-webkit-keyframes rotating {
+    from{
+        -webkit-transform: rotateY(0deg);
+    }
+    to{
+        -webkit-transform: rotateY(360deg);
+    }
+}
 .exchange-rate .select-group {
     margin-bottom: 15px;
     line-height: 1;
@@ -15,7 +34,7 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    background-image: url('icons/down-arrow.png');
+    background-image: url('images/icons/down-arrow.png');
     background-repeat: no-repeat;
     background-size: 15px;
     background-position: calc(100% - 10px) center;
