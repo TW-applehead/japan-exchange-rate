@@ -9,8 +9,20 @@
 }
 .exchange-rate .select-group select {
     padding: 5px;
+    padding-right: 40px;
     border: 1px solid #989898;
     border-radius: unset;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url(/icons/down-arrow.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: calc(100% - 10px) center;
+}
+.exchange-rate .right-arrow-icon {
+    max-width: 24px;
+    padding: 0 5px;
 }
 
 input[type="number"] {
