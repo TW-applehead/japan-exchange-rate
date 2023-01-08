@@ -1,0 +1,126 @@
+.exchange-rate .flipping-coin {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+    position: relative;
+    width: 150px;
+    height: 160px;
+    max-width: 50%;
+    transform: rotateX(18deg);
+    perspective: 200px;
+}
+.exchange-rate .flipping-coin:hover .coin-front {
+    -webkit-animation: fliptofronthover 0.5s linear infinite;
+    -moz-animation: fliptofronthover 0.5s linear infinite;
+    animation: fliptofronthover 0.5s linear infinite;
+}
+.exchange-rate .flipping-coin:hover .coin-back,
+.exchange-rate .flipping-coin:hover .coin-shadow {
+    -webkit-animation: fliptobackhover 0.5s linear infinite;
+    -moz-animation: fliptobackhover 0.5s linear infinite;
+    animation: fliptobackhover 0.5s linear infinite;
+}
+.exchange-rate .flipping-coin:hover .coin-mask {
+    display: none;
+}
+.exchange-rate .coin-front {
+    width: 150px;
+    height: 160px;
+    position: absolute;
+    left: 0;
+    backface-visibility: hidden;
+    z-index: 2;
+    -webkit-animation: fliptoback 3s ease-out infinite;
+    -moz-animation: fliptoback 3s ease-out infinite;
+    animation: fliptoback 3s ease-out infinite;
+}
+.exchange-rate .coin-mask {
+    width: 150px;
+    height: 160px;
+    position: absolute;
+    left: 0;
+    backface-visibility: hidden;
+    z-index: 3;
+    filter: brightness(2);
+    -webkit-mask-image: linear-gradient(110deg, #0000 25%, #000 35%, #0000 45%, #000 62%, #0000 80%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    -webkit-mask-position-x: -10rem;
+    -webkit-animation: coinmask 3s ease-in infinite;
+    -moz-animation: coinmask 2.3s ease-in infinite, fliptoback 3s ease-out infinite;
+    animation: coinmask 2.3s ease-in infinite, fliptoback 3s ease-out infinite;
+}
+.exchange-rate .coin-back {
+    width: 150px;
+    height: 160px;
+    position: absolute;
+    left: 0;
+    -webkit-animation: fliptofront 3s ease-out infinite;
+    -moz-animation: fliptofront 3s ease-out infinite;
+    animation: fliptofront 3s ease-out infinite;
+}
+.exchange-rate .coin-shadow {
+    width: 50%;
+    height: 6px;
+    position: absolute;
+    left: 25%;
+    bottom: -20px;
+    background-color: rgb(0, 0, 0, 6%);
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 15%);
+    border-radius: 50%;
+    -webkit-animation: fliptofront 3s ease-out infinite;
+    -moz-animation: fliptofront 3s ease-out infinite;
+    animation: fliptofront 3s ease-out infinite;
+}
+@-webkit-keyframes fliptoback {
+    0% {
+        -webkit-transform: rotateY(0deg);
+    }
+    90% {
+        -webkit-transform: rotateY(360deg);
+    }
+    100% {
+        -webkit-transform: rotateY(360deg);
+    }
+}
+@-webkit-keyframes coinmask {
+    0% {
+        -webkit-mask-position-x: -10rem;
+    }
+    73% {
+        -webkit-mask-position-x: -10rem;
+    }
+    98% {
+        -webkit-mask-position-x: 10rem;
+    }
+    100% {
+        -webkit-mask-position-x: 10rem;
+    }
+}
+@-webkit-keyframes fliptofront {
+    0% {
+        -webkit-transform: rotateY(180deg);
+    }
+    90% {
+        -webkit-transform: rotateY(540deg);
+    }
+    100% {
+        -webkit-transform: rotateY(540deg);
+    }
+}
+@-webkit-keyframes fliptobackhover {
+    from {
+        -webkit-transform: rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateY(360deg);
+    }
+}
+@-webkit-keyframes fliptofronthover {
+    from {
+        -webkit-transform: rotateY(180deg);
+    }
+    to {
+        -webkit-transform: rotateY(540deg);
+    }
+}

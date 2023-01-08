@@ -4,13 +4,19 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="default.css" rel="stylesheet">
+        <link href="css/default.css" rel="stylesheet">
+        <link href="css/flip-coin.css" rel="stylesheet">
         <script src="get-exchange-rate-data.js"></script>
         <title>Exchange Rates</title>
     </head>
     <body>
         <div class="exchange-rate">
-            <img class="coin-icon" src="images/coin.png"></i>
+            <div class="flipping-coin">
+                <img class="coin-front" src="images/coin-front.png" />
+                <img class="coin-mask" src="images/coin-front.png" />
+                <img class="coin-back" src="images/coin-back.png" />
+                <div class="coin-shadow"></div>
+            </div>
             <div class="select-group">
                 <select name="currency1" id="currency1">
                     <option value="JPY">日幣</option>
