@@ -23,11 +23,13 @@
 .exchange-rate .flipping-coin:hover .coin-mask {
     display: none;
 }
-.exchange-rate .coin-front {
+.exchange-rate .coin {
     width: 150px;
     height: 160px;
     position: absolute;
     left: 0;
+}
+.exchange-rate .coin-front {
     backface-visibility: hidden;
     z-index: 2;
     -webkit-animation: fliptoback 3s ease-out infinite;
@@ -35,25 +37,16 @@
     animation: fliptoback 3s ease-out infinite;
 }
 .exchange-rate .coin-mask {
-    width: 150px;
-    height: 160px;
-    position: absolute;
-    left: 0;
     backface-visibility: hidden;
     z-index: 3;
     filter: brightness(2);
     -webkit-mask-image: linear-gradient(110deg, #0000 25%, #000 35%, #0000 45%, #000 62%, #0000 80%);
     -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: 100% 100%;
     -webkit-animation: coinmask 2.3s ease-in infinite, fliptoback 3s ease-out infinite;
     -moz-animation: coinmask 2.3s ease-in infinite, fliptoback 3s ease-out infinite;
     animation: coinmask 2.3s ease-in infinite, fliptoback 3s ease-out infinite;
 }
 .exchange-rate .coin-back {
-    width: 150px;
-    height: 160px;
-    position: absolute;
-    left: 0;
     z-index: 1;
     -webkit-animation: fliptofront 3s ease-out infinite;
     -moz-animation: fliptofront 3s ease-out infinite;
