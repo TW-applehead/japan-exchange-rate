@@ -28,16 +28,15 @@
     height: 160px;
     position: absolute;
     left: 0;
+    backface-visibility: hidden;
 }
 .exchange-rate .coin-front {
-    backface-visibility: hidden;
     z-index: 2;
     -webkit-animation: fliptoback 3s ease-out infinite;
     -moz-animation: fliptoback 3s ease-out infinite;
     animation: fliptoback 3s ease-out infinite;
 }
 .exchange-rate .coin-mask {
-    backface-visibility: hidden;
     z-index: 3;
     filter: brightness(2);
     -webkit-mask-image: linear-gradient(110deg, #0000 25%, #000 35%, #0000 45%, #000 62%, #0000 80%);
