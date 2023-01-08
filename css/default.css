@@ -15,10 +15,10 @@
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-    background-image: url('images/icons/down-arrow.png');
+    background-image: url('../images/icons/down-arrow.png');
     background-repeat: no-repeat;
     background-size: 15px;
-    background-position: calc(100% - 10px) center;
+    background-position: calc(100% - 8px) center;
     background-color: #FFFFFF;
     color: #000000;
 }
