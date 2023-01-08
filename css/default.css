@@ -21,6 +21,7 @@
     background-position: calc(100% - 8px) center;
     background-color: #FFFFFF;
     color: #000000;
+    font-size: 16px;
 }
 .exchange-rate .right-arrow-icon {
     max-width: 24px;
@@ -29,18 +30,20 @@
 
 input[type="number"] {
     padding: 5px;
-    line-height: 18px;
+    line-height: 24px;
     border: 1px solid #989898;
     border-radius: unset;
+    font-size: 16px;
 }
 button {
     background: #AD181E;
     color: #FFFFFF;
     border: unset;
     border-radius: unset;
-    padding: 5px 30px;
+    padding: 8px 30px;
     margin-left: 15px;
     line-height: 20px;
+    font-size: 16px;
 }
 #result {
     padding: 10px;
