@@ -55,6 +55,7 @@
     height: 160px;
     position: absolute;
     left: 0;
+    z-index: 1;
     -webkit-animation: fliptofront 3s ease-out infinite;
     -moz-animation: fliptofront 3s ease-out infinite;
     animation: fliptofront 3s ease-out infinite;
