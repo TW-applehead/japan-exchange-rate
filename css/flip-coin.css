@@ -45,8 +45,7 @@
     -webkit-mask-image: linear-gradient(110deg, #0000 25%, #000 35%, #0000 45%, #000 62%, #0000 80%);
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: 100% 100%;
-    -webkit-mask-position-x: -10rem;
-    -webkit-animation: coinmask 3s ease-in infinite;
+    -webkit-animation: coinmask 2.3s ease-in infinite, fliptoback 3s ease-out infinite;
     -moz-animation: coinmask 2.3s ease-in infinite, fliptoback 3s ease-out infinite;
     animation: coinmask 2.3s ease-in infinite, fliptoback 3s ease-out infinite;
 }
