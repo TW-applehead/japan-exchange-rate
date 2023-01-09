@@ -16,8 +16,12 @@ function getExchangeRateData() {
     fetch("https://api.apilayer.com/exchangerates_data/convert?to=" + currency2 + "&from=" + currency1 + "&amount=" + amount, requestOptions)
     .then(response => response.json())
     .then(result => { 
-        console.log('test', result);
         document.getElementById('result').innerHTML = '目前匯率為: ' + result.info.rate + '<br>換算成' + currencyText2 + '為: ' + result.result.toFixed(2);
     })
-    .catch(error => console.log('error', error));
+    .catch(error => {
+        console.log('error', error);
+        if (String(error).includes("Cannot read properties of undefined")) {
+            document.getElementById('result').innerHTML = "<p style='color: red;'>請輸入數字</p>";
+        };
+    });
 }
