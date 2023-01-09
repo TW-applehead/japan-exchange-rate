@@ -44,7 +44,29 @@ button {
     margin-left: 15px;
     line-height: 20px;
     font-size: 16px;
+    cursor: pointer;
 }
+
 #result {
-    padding: 10px;
+    padding: 15px;
+    width: fit-content;
+    margin: auto;
+}
+.loader {
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid #3498db;
+    width: 17px;
+    height: 17px;
+    margin: 10px 0;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
 }

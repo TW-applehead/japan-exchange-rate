@@ -1,5 +1,5 @@
 function getExchangeRateData() {
-    document.getElementById('result').innerHTML = '';
+    document.getElementById('result').innerHTML = '<div class="loader"></div>';
     var myHeaders = new Headers();
     myHeaders.append("apikey", "oNVHnatr93QM9HPYULmelCsnxs80eV7F");
 
